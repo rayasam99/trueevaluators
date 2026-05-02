@@ -23,7 +23,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     const resend = new Resend(context.env.RESEND_API_KEY);
 
     const { error } = await resend.emails.send({
-      from: 'True Evaluators <contact@trueevaluators.com>',
+      from: 'True Evaluators <noreply@noreply.trevaluators.com>',
       to:   ['contact@trevaluators.com'],
       replyTo: email || undefined,
       subject: `New contact form submission from ${name}`,
