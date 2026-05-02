@@ -1,0 +1,383 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About Us – True Evaluators"
+  description="At True Evaluators, we recognize the significance of education and career opportunities. Learn about our mission, vision, and guiding values."
+>
+
+  <!-- ── HERO ── -->
+  <section class="inner-hero">
+    <div class="container inner-hero-content">
+      <h1>About Us</h1>
+    </div>
+  </section>
+
+  <!-- ── DUAL IMAGES ── -->
+  <section class="about-images">
+    <div class="container about-images-grid">
+      <img src="/about-us/About-Us-Img.webp" alt="About True Evaluators" class="about-img-main" />
+      <img src="/about-us/About-Us-Img-1.webp" alt="True Evaluators team" class="about-img-side" />
+    </div>
+  </section>
+
+  <!-- ── TRUSTED PARTNER ── -->
+  <section class="section-pad">
+    <div class="container trusted-grid">
+      <div class="trusted-left">
+        <span class="eyebrow">
+          <svg viewBox="0 0 14 14" fill="none" width="10" height="10" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:4px;">
+            <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          What I Do
+        </span>
+        <h2>Trusted Partner for Professional Credential Evaluations</h2>
+      </div>
+      <div class="trusted-right">
+        <p>
+          At True Evaluators, we recognize the significance of education and career
+          opportunities. Our comprehensive services, including Academic evaluation,
+          Work experience evaluation, and expert opinions, have facilitated success
+          for overseas students, corporations, professionals, and organizations.
+        </p>
+        <p style="margin-top:1rem;">
+          Distinguished in the field of credential evaluation is International Evaluations.
+          Committed to delivering accurate, reliable, and timely evaluation services to
+          clients worldwide, we take pride in providing exceptional customer service while
+          upholding industry standards. We are dedicated to meeting your specific
+          requirements and offering the support and assurance essential for thriving in
+          a highly competitive market. Your success is our ultimate objective.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EMPOWERING / VISION & MISSION ── -->
+  <section class="section-pad" style="background:var(--clr-bg-light);">
+    <div class="container empower-grid">
+      <!-- Image -->
+      <div class="empower-img-wrap">
+        <img src="/about-us/About-Us-Img-2.webp" alt="Empowering your path to success" class="empower-img" />
+      </div>
+
+      <!-- Content -->
+      <div class="empower-content">
+        <h2>Empowering Your Path to Success</h2>
+        <p style="margin-top:0.75rem;">
+          Find a range of services, like academic evaluations, expert opinion letters,
+          and Work experience evaluations. We guide you through the details, making
+          sure your journey is known and celebrated worldwide.
+        </p>
+
+        <!-- Vision Box (dark teal) -->
+        <div class="vm-card vm-card-dark" style="margin-top:1.5rem;">
+          <span class="vm-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/>
+            </svg>
+          </span>
+          <div>
+            <h4>Our Vision</h4>
+            <p>
+              We want to be the top choice for all your immigration needs and help as many
+              businesses and students as we can.
+            </p>
+          </div>
+        </div>
+
+        <!-- Mission Box (white) -->
+        <div class="vm-card vm-card-light" style="margin-top:0.75rem;">
+          <span class="vm-icon vm-icon-light" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+            </svg>
+          </span>
+          <div>
+            <h4 style="color:var(--clr-text-dark);">Our Mission</h4>
+            <p>
+              We aim to make immigration for business or education smooth and successful
+              for all our clients, making their futures big and bright.
+            </p>
+          </div>
+        </div>
+
+        <a href="/contact" class="btn btn-primary" style="margin-top:1.75rem;">Get Evaluate Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS ── -->
+  <section class="stats-band">
+    <div class="container stats-band-inner">
+      {[
+        { num: '5+',   sup: '',  label: 'Years Experience' },
+        { num: '10',   sup: '+', label: 'Trusted Partners' },
+        { num: '95',   sup: '%', label: 'Problem Solved' },
+        { num: '100',  sup: '+', label: 'Satisfied Clients' },
+      ].map((s, i) => (
+        <div class="stats-band-item">
+          {i > 0 && <span class="stats-sep" aria-hidden="true"></span>}
+          <div class="stats-band-num">
+            {s.num}<sup>{s.sup}</sup>
+          </div>
+          <div class="stats-band-label">{s.label}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ── CORE VALUES ── -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="cv-header">
+        <div class="cv-header-left">
+          <span class="eyebrow">
+            <svg viewBox="0 0 14 14" fill="none" width="10" height="10" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:4px;">
+              <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            Our Core Values
+          </span>
+          <p style="margin-top:0.6rem;font-size:0.88rem;max-width:240px;">
+            Integrity, innovation, excellence—
+            our core values shape our
+            commitment to success.
+          </p>
+        </div>
+        <h2 class="cv-heading">True Evaluators' Guiding Values in<br class="cv-br"/> a Decade of Words.</h2>
+      </div>
+
+      <div class="cv-cards">
+        <div class="cv-card">
+          <h3>Client Satisfaction</h3>
+          <p>
+            We create personalized solutions designed by experts from different fields
+            to make sure every client is happy and content.
+          </p>
+        </div>
+        <div class="cv-card">
+          <h3>Planning &amp; Strategy</h3>
+          <p>
+            After carefully looking at all your documents, credits, and other resources,
+            we provide the best plan and help plan the steps to reach your main goal.
+          </p>
+        </div>
+        <div class="cv-card cv-card-dark">
+          <h3>Customer Relationship</h3>
+          <p>
+            Our help doesn't stop with business plans or evaluations. We always check in
+            to make sure you've achieved your goals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+/* Inner hero */
+.inner-hero {
+  background: var(--clr-bg-cream);
+  text-align: center;
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+.inner-hero-content {}
+.inner-hero h1 {
+  color: var(--clr-primary);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+/* Dual images */
+.about-images {
+  background: var(--clr-bg-cream);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+.about-images-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 1rem;
+}
+@media (max-width: 640px) { .about-images-grid { grid-template-columns: 1fr; } }
+.about-img-main {
+  height: clamp(320px, 40vw, 520px);
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+.about-img-side {
+  height: clamp(320px, 40vw, 520px);
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+/* Trusted Partner */
+.trusted-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+@media (min-width: 768px) { .trusted-grid { grid-template-columns: 1fr 1fr; } }
+.trusted-left .eyebrow { color: var(--clr-primary); }
+.trusted-left h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-top: 0.6rem;
+}
+.trusted-right p { font-size: 0.9rem; }
+
+/* Empower */
+.empower-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (min-width: 768px) { .empower-grid { grid-template-columns: 1fr 1fr; } }
+
+.empower-img-wrap { display: flex; justify-content: center; }
+.empower-img {
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  display: block;
+}
+
+.empower-content h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+
+.vm-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.25rem;
+}
+.vm-card-dark {
+  background: var(--clr-primary-dark);
+}
+.vm-card-dark h4 { color: white; font-size: 1rem; margin-bottom: 0.35rem; }
+.vm-card-dark p  { color: rgba(255,255,255,0.65); font-size: 0.84rem; }
+
+.vm-card-light {
+  background: var(--clr-white);
+  border: 1px solid var(--clr-border);
+}
+.vm-card-light h4 { font-size: 1rem; margin-bottom: 0.35rem; }
+.vm-card-light p  { font-size: 0.84rem; }
+
+.vm-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+.vm-icon-light {
+  background: var(--clr-primary-light);
+  color: var(--clr-primary);
+}
+
+/* Stats Band */
+.stats-band {
+  background: var(--clr-white);
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+  padding-block: clamp(2rem, 4vw, 3rem);
+}
+.stats-band-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.stats-band-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 1rem clamp(1.5rem, 4vw, 3rem);
+  text-align: center;
+}
+.stats-sep {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: var(--clr-border);
+}
+@media (min-width: 480px) { .stats-sep { display: block; } }
+
+.stats-band-num {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--clr-text-dark);
+  line-height: 1;
+}
+.stats-band-num sup {
+  font-size: 0.55em;
+  color: var(--clr-primary);
+  vertical-align: super;
+}
+.stats-band-label {
+  font-size: 0.8rem;
+  color: var(--clr-text-body);
+  margin-top: 0.3rem;
+}
+
+/* Core Values */
+.cv-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: end;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 768px) { .cv-header { grid-template-columns: 240px 1fr; } }
+.cv-heading {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+}
+.cv-br { display: none; }
+@media (min-width: 768px) { .cv-br { display: block; } }
+
+.cv-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 640px)  { .cv-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .cv-cards { grid-template-columns: repeat(3, 1fr); } }
+
+.cv-card {
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  background: var(--clr-white);
+  transition: transform var(--ease), box-shadow var(--ease);
+}
+.cv-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.cv-card h3 { font-size: 1.1rem; margin-bottom: 0.7rem; }
+.cv-card p  { font-size: 0.88rem; }
+
+.cv-card-dark {
+  background: var(--clr-primary-dark);
+  border-color: var(--clr-primary-dark);
+}
+.cv-card-dark h3 { color: white; }
+.cv-card-dark p  { color: rgba(255,255,255,0.7); }
+</style>

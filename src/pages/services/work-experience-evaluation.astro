@@ -1,0 +1,206 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Work Experience Evaluation – True Evaluators"
+  description="As a premier provider of educational credential equivalency evaluations, True Evaluators stands at the forefront in delivering meticulous analytical reports."
+>
+
+  <!-- ── HERO ── -->
+  <section class="inner-hero">
+    <div class="container" style="text-align:center;">
+      <h1>Work Experience Evaluation</h1>
+    </div>
+  </section>
+
+  <!-- ── DUAL IMAGES ── -->
+  <section style="background:var(--clr-bg-cream);padding-bottom:clamp(2rem,4vw,3.5rem);">
+    <div class="container dual-imgs">
+      <img src="/Work-Experience-Evaluation/Work-Experience-1.webp" alt="Work Experience Evaluation" class="dual-img-main" />
+      <img src="/Work-Experience-Evaluation/Work-Experience-2.webp" alt="Work Experience Evaluation services" class="dual-img-side" />
+    </div>
+  </section>
+
+  <!-- ── PREMIER PROVIDER ── -->
+  <section class="section-pad">
+    <div class="container premier-grid">
+      <img src="/Work-Experience-Evaluation/Work-Experience-Img.webp" alt="Premier provider of educational credential equivalency evaluations" class="premier-img" />
+      <div class="premier-content">
+        <h2>As a premier provider of educational credential equivalency evaluations</h2>
+        <p class="premier-italic">
+          (Work Experience Evaluation Services), True Evaluators stands at the forefront
+          in delivering meticulous analytical reports.
+        </p>
+        <p style="margin-top:1rem;">
+          Our assessments determine the equivalence of a candidate's foreign academic and
+          professional credentials within the US educational system. Widely acknowledged
+          for their precision and depth, our evaluations have earned recognition from key
+          institutions such as the US Citizenship and Immigration Services, the US Labor
+          Department, professional advisory boards, international academic advisory
+          organizations, and esteemed American universities.
+        </p>
+        <p style="margin-top:1rem;">
+          We assess Education, Training, and Employment Experience to understand a
+          candidate's professional background. This involves analyzing formal education,
+          training programs, and work experience. Our work experience evaluation services
+          follow the US Citizenship and Immigration Services' standard, where three years
+          of work experience equals one year of university education. We (True Evaluators
+          Experience Evaluation Services) carefully examine job titles, responsibilities,
+          training opportunities, managerial duties, the progressive nature of experience,
+          and the employer's role in the industry. Notably, our assessments are carried
+          out by university professors authorized to grant college-level credit in the
+          relevant field of study.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DOCUMENTS REQUIRED ── -->
+  <section class="section-pad" style="background:var(--clr-bg-light);">
+    <div class="container docs-grid">
+      <div class="docs-left">
+        <span class="eyebrow">
+          <svg viewBox="0 0 14 14" fill="none" width="10" height="10" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:4px;">
+            <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          Documents Required
+        </span>
+        <h2 style="margin-top:0.6rem;font-size:clamp(1.5rem,3vw,2.2rem);">
+          Essential documents for seamless processes, ensuring precision and compliance.
+        </h2>
+
+        <ul class="checklist" style="margin-top:1.5rem;">
+          {[
+            'A detailed resume specifying job history, including company names, month/year of employment, and specific duties.',
+            'Supporting letters from previous employers, outlining periods of employment, job titles, and responsibilities.',
+            'Diplomas, transcripts, and postgraduate degrees.',
+          ].map(item => (
+            <li class="checklist-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" width="18" height="18">
+                  <circle cx="10" cy="10" r="9" fill="var(--clr-primary-light)" stroke="var(--clr-primary)" stroke-width="1.2"/>
+                  <path d="M6 10l3 3 5-6" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span class="check-text">{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <p style="margin-top:1.25rem;font-size:0.88rem;">
+          True Evaluators is proud to offer Experience Evaluation for the quickest
+          turnaround time in the credentials equivalency field for both academic and
+          work experience evaluations.
+        </p>
+
+        <a href="/contact" class="btn btn-primary" style="margin-top:1.5rem;">Get Evaluate Now</a>
+      </div>
+
+      <div class="docs-right">
+        <!-- Placeholder for additional content -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROCESS ── -->
+  <section class="section-pad" style="background:var(--clr-bg-light);">
+    <div class="container process-layout">
+      <div class="process-intro">
+        <span class="eyebrow">
+          <svg viewBox="0 0 14 14" fill="none" width="10" height="10" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:4px;">
+            <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          Our Process
+        </span>
+        <p style="margin-top:0.6rem;font-size:0.88rem;line-height:1.7;">
+          Navigate our streamlined process—efficiency, accuracy, and personalized solutions
+          ensure your success through every step of your immigration and credential evaluation journey.
+        </p>
+      </div>
+      <div class="process-steps">
+        <div class="step-card step-card-highlight">
+          <h4>Preliminary Consultation</h4>
+          <p>
+            Commence the process by completing the online form, providing essential background
+            details, academic objectives, and preferences for our services. Benefit from expert
+            guidance to determine the most suitable service plan tailored to your specific needs.
+          </p>
+        </div>
+        <div class="step-card">
+          <h4>Document Collection</h4>
+          <p>
+            Select your service plan, receive a comprehensive document checklist, and promptly
+            submit the necessary records for swift processing.
+          </p>
+        </div>
+        <div class="step-card">
+          <h4>Case Review and Preparation</h4>
+          <p>
+            A dedicated expert will meticulously evaluate, research, and compose a detailed,
+            customized evaluation report. You will have the opportunity to review a draft before
+            finalizing the report.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONCLUSION ── -->
+  <section class="section-pad">
+    <div class="container conclusion-grid">
+      <img src="/Work-Experience-Evaluation/Work-Experience-Img-1.webp" alt="Conclusion and Delivery" class="conclusion-img" />
+      <div>
+        <h2>Conclusion and Delivery</h2>
+        <p style="margin-top:0.75rem;">
+          Upon your approval, the final report will be delivered in PDF format. If preferred,
+          you can opt for mail delivery for an additional fee. Our commitment to transparent
+          communication ensures satisfaction at every stage of the process.
+        </p>
+        <a href="/contact" class="cta-link" style="margin-top:1.25rem;display:inline-flex;align-items:center;gap:0.4rem;color:var(--clr-primary);font-weight:600;font-size:0.9rem;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Get Evaluate Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.inner-hero { background:var(--clr-bg-cream); padding-block:clamp(3rem,6vw,5rem); }
+.inner-hero h1 { color:var(--clr-primary); font-size:clamp(2rem,5vw,3rem); }
+
+.dual-imgs { display:grid; grid-template-columns:3fr 2fr; gap:1rem; }
+@media (max-width:640px) { .dual-imgs { grid-template-columns:1fr; } }
+.dual-img-main { height:clamp(320px,40vw,520px); border-radius:var(--radius-lg); width:100%; object-fit:cover; display:block; }
+.dual-img-side { height:clamp(320px,40vw,520px); border-radius:var(--radius-lg); width:100%; object-fit:cover; display:block; }
+
+.premier-grid { display:grid; grid-template-columns:1fr; gap:2.5rem; align-items:center; }
+@media (min-width:768px) { .premier-grid { grid-template-columns:1fr 1.2fr; } }
+.premier-img { width:100%; aspect-ratio:4/5; border-radius:var(--radius-lg); object-fit:cover; display:block; }
+.premier-content h2 { font-size:clamp(1.4rem,2.5vw,2rem); }
+.premier-italic { font-style:italic; color:var(--clr-primary); font-size:0.9rem; margin-top:0.75rem; }
+.premier-content p { font-size:0.88rem; }
+
+.docs-grid { display:grid; grid-template-columns:1fr; gap:2rem; }
+@media (min-width:768px) { .docs-grid { grid-template-columns:1fr 1fr; } }
+.docs-left {}
+.checklist { list-style:none; display:flex; flex-direction:column; gap:0.85rem; }
+.checklist-item { display:flex; gap:0.65rem; align-items:flex-start; }
+.check-icon { flex-shrink:0; margin-top:1px; }
+.check-text { font-size:0.88rem; color:var(--clr-primary); line-height:1.5; }
+
+.process-layout { display:grid; grid-template-columns:1fr; gap:2rem; padding-top:0; }
+@media (min-width:1024px) { .process-layout { grid-template-columns:200px 1fr; } }
+.process-steps { display:grid; grid-template-columns:1fr; gap:1rem; }
+@media (min-width:640px) { .process-steps { grid-template-columns:repeat(3,1fr); } }
+.step-card { border:1px solid var(--clr-border); border-radius:var(--radius-lg); padding:1.5rem; background:var(--clr-white); }
+.step-card-highlight { background:var(--clr-bg-cream); border-color:#e8cec8; }
+.step-card h4 { font-size:0.95rem; margin-bottom:0.6rem; font-family:var(--font-body); font-weight:700; }
+.step-card p { font-size:0.83rem; line-height:1.65; }
+
+.conclusion-grid { display:grid; grid-template-columns:1fr; gap:2.5rem; align-items:center; }
+@media (min-width:768px) { .conclusion-grid { grid-template-columns:1fr 1fr; } }
+.conclusion-img { width:100%; aspect-ratio:4/3; border-radius:var(--radius-lg); object-fit:cover; display:block; }
+</style>

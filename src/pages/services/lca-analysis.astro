@@ -1,0 +1,182 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const steps = [
+  {
+    num: '1.',
+    title: 'Job Description Review',
+    items: [
+      'Meticulously examine the job description to ensure it precisely outlines the duties and responsibilities of the H-1B position.',
+      "Align the job description with the Department of Labor (DOL)'s criteria for a specialty occupation.",
+    ],
+  },
+  {
+    num: '2.',
+    title: 'Wage Analysis',
+    items: [
+      'Determine the prevailing wage for the specific occupation and location using reputable sources such as O*NET OnLine or independent surveys.',
+      'Conduct a comprehensive comparison between the offered wage and the prevailing wage to ensure it not only meets but exceeds the minimum requirement.',
+    ],
+  },
+  {
+    num: '3.',
+    title: 'Benefits Analysis',
+    items: [
+      'Evaluate the benefits provided to the H-1B worker in comparison to those offered to similarly employed U.S. workers.',
+      'Verify the comparability of benefits, including health insurance, paid leave, and other forms of compensation.',
+    ],
+  },
+  {
+    num: '4.',
+    title: 'Work Location Analysis',
+    items: [
+      'Confirm the accuracy and completeness of the listed work locations in the Labor Condition Application (LCA).',
+      'Ensure strict adherence to authorized work locations for the H-1B worker.',
+    ],
+  },
+  {
+    num: '5.',
+    title: 'Public Access File Review',
+    items: [
+      'Verify the existence of a well-maintained public access file that contains all requisite LCA documents.',
+      'Ensure the file is readily accessible as per regulatory requirements.',
+    ],
+  },
+  {
+    num: '6.',
+    title: 'Compliance with LCA Regulations',
+    items: [
+      'Scrutinize the entire LCA process to ensure strict compliance with all relevant Department of Labor (DOL) regulations.',
+      'Identify and rectify any potential compliance issues that may arise during the analysis.',
+    ],
+  },
+  {
+    num: '7.',
+    title: 'Documentation Review',
+    items: [
+      'Verify the accuracy and completeness of all supporting documentation that substantiates the LCA attestations.',
+      'Ensure that all documentation aligns seamlessly with the requirements outlined in the H-1B visa application process.',
+    ],
+  },
+];
+---
+
+<Layout
+  title="LCA Analysis FOR H-1B RFE – True Evaluators"
+  description="H-1B RFE: Decoding the Path to Visa Success. Comprehensive LCA Analysis services to strengthen your H-1B petition and respond to USCIS RFEs."
+>
+
+  <!-- ── HERO ── -->
+  <section class="inner-hero">
+    <div class="container" style="text-align:center;">
+      <h1>LCA Analysis FOR H-1B RFE</h1>
+    </div>
+  </section>
+
+  <!-- ── DUAL IMAGES ── -->
+  <section style="background:var(--clr-bg-cream);padding-bottom:clamp(2rem,4vw,3.5rem);">
+    <div class="container dual-imgs">
+      <img src="/LCA-Analysis-FOR-H-1B-RFE/LCA-Analysis-Img.jpg" alt="LCA Analysis for H-1B RFE" class="dual-img-main" />
+      <img src="/LCA-Analysis-FOR-H-1B-RFE/LCA-Analysis-Img-1.jpg" alt="LCA Analysis services" class="dual-img-side" />
+    </div>
+  </section>
+
+  <!-- ── INTRO SECTION ── -->
+  <section class="section-pad">
+    <div class="container intro-grid">
+      <div class="intro-left">
+        <span class="eyebrow">
+          <svg viewBox="0 0 14 14" fill="none" width="10" height="10" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:4px;">
+            <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          Navigating H-1B RFEs
+        </span>
+        <h2 style="margin-top:0.6rem;">H-1B RFE: Decoding the Path to Visa Success</h2>
+      </div>
+      <div class="intro-right">
+        <p>
+          When it comes to H-1B visa applications, getting things right is crucial,
+          especially if there's a Request for Evidence (RFE). One essential component
+          in this process is the Labor Condition Application (LCA). We're here to break
+          down the complexities and make sense of it in a straightforward LCA Analysis
+          for H-1B RFEs.
+        </p>
+        <p style="margin-top:0.9rem;">
+          In this LCA Analysis for H-1B RFEs, we're looking at seven important aspects
+          to strengthen your H-1B petition. From making sure job descriptions match
+          requirements to checking if wages are up to standard, we cover it all. We also
+          examine benefits, work locations, and public access files, leaving no stone
+          unturned. Our goal is to ensure everything aligns with Department of Labor (DOL)
+          rules and that supporting documents are in order, providing a solid response to
+          H-1B RFEs.
+        </p>
+        <p style="margin-top:0.9rem;">
+          So, join us on this journey as we simplify the process and focus on the key
+          elements needed for a successful H-1B application.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STEPS ── -->
+  <section class="section-pad" style="background:var(--clr-bg-cream);">
+    <div class="container">
+      <div class="steps-grid">
+        {steps.map(step => (
+          <div class="lca-step-card">
+            <h3>{step.num} {step.title}</h3>
+            <ul class="checklist" style="margin-top:0.75rem;">
+              {step.items.map(item => (
+                <li class="checklist-item">
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" fill="none" width="18" height="18">
+                      <circle cx="10" cy="10" r="9" fill="var(--clr-primary-light)" stroke="var(--clr-primary)" stroke-width="1.2"/>
+                      <path d="M6 10l3 3 5-6" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="check-text">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.inner-hero { background:var(--clr-bg-cream); padding-block:clamp(3rem,6vw,5rem); }
+.inner-hero h1 { color:var(--clr-primary); font-size:clamp(2rem,5vw,3rem); }
+
+.dual-imgs { display:grid; grid-template-columns:3fr 2fr; gap:1rem; }
+@media (max-width:640px) { .dual-imgs { grid-template-columns:1fr; } }
+.dual-img-main { height:clamp(320px,40vw,520px); border-radius:var(--radius-lg); width:100%; object-fit:cover; display:block; }
+.dual-img-side { height:clamp(320px,40vw,520px); border-radius:var(--radius-lg); width:100%; object-fit:cover; display:block; }
+
+.intro-grid { display:grid; grid-template-columns:1fr; gap:2.5rem; }
+@media (min-width:768px) { .intro-grid { grid-template-columns:1fr 1.4fr; align-items:start; } }
+.intro-left h2 { font-size:clamp(1.5rem,2.5vw,2.2rem); }
+.intro-right p { font-size:0.9rem; }
+
+.steps-grid {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.25rem;
+}
+@media (min-width:640px) { .steps-grid { grid-template-columns:repeat(2,1fr); } }
+
+.lca-step-card {
+  background:var(--clr-white);
+  border:1px solid var(--clr-border);
+  border-radius:var(--radius-lg);
+  padding:1.5rem;
+}
+.lca-step-card h3 { font-size:1rem; font-family:var(--font-body); font-weight:700; color:var(--clr-text-dark); }
+
+.checklist { list-style:none; display:flex; flex-direction:column; gap:0.75rem; }
+.checklist-item { display:flex; gap:0.65rem; align-items:flex-start; }
+.check-icon { flex-shrink:0; margin-top:1px; }
+.check-text { font-size:0.85rem; color:var(--clr-primary); line-height:1.5; }
+</style>

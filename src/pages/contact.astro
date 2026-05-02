@@ -1,0 +1,273 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact Us – True Evaluators"
+  description="Connect with True Evaluators. Whether you have inquiries about immigration services or need assistance with credential evaluations, our dedicated team is here to help."
+>
+
+  <!-- ── HERO ── -->
+  <section class="inner-hero">
+    <div class="container" style="text-align:center;">
+      <h1>Get In Touch With Me</h1>
+      <p class="hero-sub">
+        Connect with True Evaluators. Whether you have inquiries about immigration services or need
+        assistance with credential evaluations, our dedicated team is here to provide prompt and
+        helpful support. Reach out today.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── CONTACT INFO ROW ── -->
+  <section class="contact-info-band">
+    <div class="container contact-info-grid">
+      <!-- Address -->
+      <div class="contact-info-item">
+        <span class="ci-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </span>
+        <div>
+          <p>1580 Sawgrass</p>
+          <p>Corporate Pkwy, Suite</p>
+          <p>130 Sunrise, FL 33323</p>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="contact-info-item">
+        <span class="ci-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </span>
+        <div>
+          <a href="tel:+13054899346">(305) 489-9346</a>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-info-item">
+        <span class="ci-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </span>
+        <div>
+          <a href="mailto:contact@trevaluators.com">contact@trevaluators.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT FORM ── -->
+  <section class="section-pad">
+    <div class="container" style="text-align:center;">
+      <h2>Feel Free to Send a Message</h2>
+      <p class="form-sub">
+        Complete the form for personalized assistance, ensuring accurate and timely
+        solutions tailored to your immigration and credential evaluation needs.
+      </p>
+    </div>
+
+    <div class="container form-layout" style="margin-top:2.5rem;">
+      <!-- Image -->
+      <img src="/about-us/About-Us-Img-2.webp" alt="True Evaluators contact" class="form-img" />
+
+      <!-- Form -->
+      <div class="contact-form-wrap">
+        <div id="form-success" class="form-notice form-success" style="display:none;">
+          Thank you! Your message has been sent. We'll be in touch shortly.
+        </div>
+        <div id="form-error" class="form-notice form-error" style="display:none;">
+          Something went wrong. Please try again or email us directly.
+        </div>
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-field">
+            <input type="text" name="name" placeholder="Name" required />
+            <span class="required-mark" aria-hidden="true">*</span>
+          </div>
+          <div class="form-field">
+            <input type="tel" name="phone" placeholder="Phone" />
+          </div>
+          <div class="form-field">
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+          <div class="form-field">
+            <input type="text" name="address" placeholder="Address" />
+          </div>
+          <div class="form-field">
+            <textarea name="message" placeholder="Message" rows="5"></textarea>
+          </div>
+          <button type="submit" id="submit-btn" class="btn btn-primary submit-btn">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MAP ── -->
+  <section class="map-section">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.197!2d-80.3097!3d26.1448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9a4f8f8f8f8f8%3A0x0!2s1580+Sawgrass+Corporate+Pkwy%2C+Suite+130%2C+Sunrise%2C+FL+33323!5e0!3m2!1sen!2sus!4v1700000000000"
+      width="100%"
+      height="420"
+      style="border:0;"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="True Evaluators Office Location"
+    ></iframe>
+  </section>
+
+<script>
+const form = document.getElementById('contact-form') as HTMLFormElement;
+const btn  = document.getElementById('submit-btn') as HTMLButtonElement;
+const successBox = document.getElementById('form-success') as HTMLElement;
+const errorBox   = document.getElementById('form-error')   as HTMLElement;
+
+form?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  successBox.style.display = 'none';
+  errorBox.style.display   = 'none';
+  btn.disabled    = true;
+  btn.textContent = 'Sending…';
+
+  try {
+    const res  = await fetch('/api/contact', { method: 'POST', body: new FormData(form) });
+    const json = await res.json();
+    if (json.ok) {
+      successBox.style.display = 'block';
+      form.reset();
+    } else {
+      errorBox.style.display = 'block';
+    }
+  } catch {
+    errorBox.style.display = 'block';
+  } finally {
+    btn.disabled    = false;
+    btn.textContent = 'SUBMIT';
+  }
+});
+</script>
+
+</Layout>
+
+<style>
+.inner-hero { background:var(--clr-bg-cream); padding-block:clamp(3rem,6vw,5rem); }
+.inner-hero h1 { color:var(--clr-primary); font-size:clamp(2rem,5vw,3rem); }
+.hero-sub { max-width:580px; margin-inline:auto; margin-top:1rem; font-size:0.92rem; }
+
+/* Contact info band */
+.contact-info-band {
+  background:var(--clr-bg-cream);
+  padding-block:clamp(1.5rem,3vw,2.5rem);
+  border-top:1px solid rgba(0,0,0,0.05);
+}
+.contact-info-grid {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:2rem;
+}
+@media (min-width:640px)  { .contact-info-grid { grid-template-columns:repeat(2,1fr); } }
+@media (min-width:1024px) { .contact-info-grid { grid-template-columns:repeat(3,1fr); } }
+
+.contact-info-item {
+  display:flex;
+  gap:1rem;
+  align-items:flex-start;
+}
+.ci-icon {
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:rgba(30,133,133,0.1);
+  border:1px solid rgba(30,133,133,0.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--clr-primary);
+  flex-shrink:0;
+}
+.contact-info-item p,
+.contact-info-item a {
+  font-size:0.88rem;
+  color:var(--clr-text-dark);
+  line-height:1.6;
+}
+.contact-info-item a { color:var(--clr-text-dark); }
+.contact-info-item a:hover { color:var(--clr-primary); }
+
+/* Form subtitle */
+.form-sub { max-width:520px; margin-inline:auto; margin-top:0.75rem; font-size:0.9rem; }
+
+/* Form layout */
+.form-layout {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:2.5rem;
+  align-items:start;
+}
+@media (min-width:768px) { .form-layout { grid-template-columns:1fr 1fr; } }
+.form-img { width:100%; aspect-ratio:3/4; border-radius:var(--radius-lg); object-fit:cover; display:block; }
+
+/* Form */
+.contact-form-wrap {
+  background:var(--clr-white);
+  border:1px solid var(--clr-border);
+  border-radius:var(--radius-lg);
+  padding:2rem;
+}
+.contact-form { display:flex; flex-direction:column; gap:1rem; }
+.form-field { position:relative; }
+.form-field input,
+.form-field textarea {
+  width:100%;
+  border:none;
+  border-bottom:1px solid var(--clr-border);
+  padding:0.7rem 0.25rem;
+  font-size:0.88rem;
+  color:var(--clr-text-dark);
+  background:transparent;
+  outline:none;
+  transition:border-color var(--ease);
+  font-family:var(--font-body);
+  resize:vertical;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder { color:var(--clr-text-muted); }
+.form-field input:focus,
+.form-field textarea:focus { border-color:var(--clr-primary); }
+
+.required-mark {
+  position:absolute;
+  right:0.25rem;
+  top:0.7rem;
+  color:red;
+  font-size:0.9rem;
+}
+.submit-btn {
+  align-self:flex-start;
+  border-radius:var(--radius-sm);
+  letter-spacing:0.08em;
+  font-size:0.8rem;
+  margin-top:0.5rem;
+}
+
+/* Map */
+.map-section { line-height:0; }
+.map-section iframe { display:block; }
+
+/* Form notices */
+.form-notice {
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  font-size: 0.88rem;
+  margin-bottom: 1rem;
+}
+.form-success { background:#edfaf4; border:1px solid #6fcf97; color:#1a6640; }
+.form-error   { background:#fef2f2; border:1px solid #f87171; color:#991b1b; }
+</style>

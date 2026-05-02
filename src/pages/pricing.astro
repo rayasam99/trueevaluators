@@ -1,0 +1,174 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const rows = [
+  {
+    service: 'Academic Evaluations',
+    standard: '$85 (3 business days)',
+    expedited: '$140 (next day)',
+    sameday: '$175',
+  },
+  {
+    service: 'In-House Work Experience Evaluations (Computer & Business fields)',
+    standard: '$235 (3 business days)',
+    expedited: '$295 (next day)',
+    sameday: '$350',
+  },
+  {
+    service: 'Certified Translations',
+    standard: 'Translation costs vary by language and density of text, so please submit documents for price quote',
+    expedited: '–',
+    sameday: '–',
+  },
+  {
+    service: 'Specialty Occupation Expert Opinion Letter',
+    standard: '$525 (3-5 business days)',
+    expedited: '$625 (1-2 business days)',
+    sameday: '–',
+  },
+  {
+    service: 'Work Experience Expert Opinion Letter',
+    standard: '$525 (3-5 business days)',
+    expedited: '$625 (1-2 business days)',
+    sameday: '–',
+  },
+  {
+    service: 'Specialty Occupation + Work Experience Expert Opinion Letter',
+    standard: '$700 (3-5 business days)',
+    expedited: '$800 (1-2 business days)',
+    sameday: '–',
+  },
+  {
+    service: 'Professor Phone Interview',
+    standard: '$250',
+    expedited: '–',
+    sameday: '–',
+  },
+  {
+    service: 'Business Necessity Expert Letter (for PERM Audit Response)',
+    standard: '$625 (3-5 business days)',
+    expedited: '$725 (2-3 business days)',
+    sameday: '–',
+  },
+  {
+    service: 'L1A/L1B Expert Letter',
+    standard: '$625 (3-5 business days)',
+    expedited: '$725 (2-3 business days)',
+    sameday: '–',
+  },
+  {
+    service: 'O1/EB1/NIW',
+    standard: 'Starting at $800',
+    expedited: '–',
+    sameday: '–',
+  },
+];
+---
+
+<Layout
+  title="Pricing – True Evaluators"
+  description="Transparent pricing for all True Evaluators credential evaluation services. Standard, Expedited, and Same Day options available."
+>
+
+  <!-- ── HERO ── -->
+  <section class="inner-hero">
+    <div class="container" style="text-align:center;">
+      <h1>Pricing</h1>
+    </div>
+  </section>
+
+  <!-- ── PRICING TABLE ── -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="table-wrap">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th class="th-service"></th>
+              <th>Standard</th>
+              <th>Expedited</th>
+              <th>Same Day</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row, i) => (
+              <tr class={i % 2 === 0 ? 'row-even' : 'row-odd'}>
+                <td class="td-service">{row.service}</td>
+                <td>{row.standard}</td>
+                <td>{row.expedited}</td>
+                <td>{row.sameday}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Note -->
+      <div class="pricing-note">
+        <p>
+          <strong>Please Note:</strong> Kindly be informed that academic evaluation and in-house work experience
+          evaluation requests for the same day must be submitted before 1 PM Eastern time. Please note that
+          processing times may differ for expert opinion letters and certified translations. We endeavor to review
+          these requests promptly to assess feasibility, rates, and turnaround times. While expedited service may
+          result in increased rates for expert opinion letters and certified translations, it is important to note
+          that same-day service is typically not an option for these specific services. Discounts are applicable
+          when multiple expert opinion letters are needed for a case. Feel free to submit your documents for a
+          complimentary price quote.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.inner-hero { background:var(--clr-bg-cream); padding-block:clamp(3rem,6vw,5rem); }
+.inner-hero h1 { color:var(--clr-primary); font-size:clamp(2rem,5vw,3rem); }
+
+.table-wrap { overflow-x:auto; border-radius:var(--radius-lg); border:1px solid var(--clr-border); }
+
+.pricing-table {
+  width:100%;
+  border-collapse:collapse;
+  font-size:0.88rem;
+  min-width:600px;
+}
+
+.pricing-table thead tr {
+  background:var(--clr-primary-dark);
+}
+.pricing-table thead th {
+  color:white;
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:0.85rem;
+  padding:1rem 1.25rem;
+  text-align:left;
+  letter-spacing:0.03em;
+}
+.th-service { width:35%; }
+
+.pricing-table tbody td {
+  padding:0.9rem 1.25rem;
+  color:var(--clr-text-body);
+  border-bottom:1px solid var(--clr-border);
+  vertical-align:top;
+  line-height:1.5;
+}
+.td-service {
+  color:var(--clr-text-dark);
+  font-weight:500;
+}
+.row-even { background:var(--clr-white); }
+.row-odd  { background:var(--clr-bg-light); }
+
+.pricing-table tbody tr:last-child td { border-bottom:none; }
+
+.pricing-note {
+  margin-top:2rem;
+  font-size:0.86rem;
+  line-height:1.75;
+  color:var(--clr-text-body);
+}
+.pricing-note strong { color:var(--clr-text-dark); }
+</style>

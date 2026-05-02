@@ -1,0 +1,205 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const services = [
+  {
+    title: 'Academic Evaluations',
+    desc: 'True Evaluators is the premier provider of credential evaluations essential for students immigrating to pursue their academic endeavors, ensuring seamless recognition and a pathway to success.',
+    href: '/services/academic-evaluation',
+  },
+  {
+    title: 'Work Experience Evaluation',
+    desc: 'Following the standards set by the US Citizenship and Immigration Services (USCIS), our work experience evaluations meticulously align with pertinent professional backgrounds.',
+    href: '/services/work-experience-evaluation',
+  },
+  {
+    title: 'Expert Opinion Letter',
+    desc: 'When dealing with extraordinary ability petitions, delineating a specialized occupation, addressing RFEs, or any other case necessitating expert opinion, an Opinion Letter is essential.',
+    href: '/services/expert-opinion-letter',
+  },
+  {
+    title: 'LCA Analysis FOR H-1B RFE',
+    desc: 'When it comes to H-1B visa applications, getting things right is crucial, especially if there\'s a Request for Evidence (RFE). One essential component in this process is the Labor Condition Application (LCA).',
+    href: '/services/lca-analysis',
+  },
+  {
+    title: 'CPT Analysis for H-1B RFE',
+    desc: 'Effectively navigating the CPT analysis for an H-1B RFE demands a nuanced understanding of your unique circumstances and the exacting standards set by USCIS. In order to assist you in this intricate process.',
+    href: '/services/cpt-analysis',
+  },
+  {
+    title: 'Integrated Expert Opinion',
+    desc: 'This service encompasses an integrated expert opinion, incorporating both academic and professional evaluations of the beneficiary\'s qualifications, coupled with an assessment of the specialized occupation position.',
+    href: '/services/integrated-expert-opinion',
+  },
+];
+---
+
+<Layout
+  title="Services – True Evaluators"
+  description="Explore True Evaluators' diverse range of specialized credential evaluation services. From academic evaluations to immigration solutions."
+>
+
+  <!-- ── HERO ── -->
+  <section class="inner-hero">
+    <div class="container" style="text-align:center;">
+      <h1>True Evaluators' Diverse Range of<br class="hero-br"/> Specialized Services</h1>
+      <p class="hero-sub">
+        Explore our array of expert services, from academic evaluations to
+        immigration solutions. Tailored support for success in your educational
+        and professional journey.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── SERVICES GRID ── -->
+  <section class="section-pad">
+    <div class="container srv-layout">
+
+      <!-- Left intro -->
+      <div class="srv-intro">
+        <span class="eyebrow">
+          <svg viewBox="0 0 14 14" fill="none" width="10" height="10" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:4px;">
+            <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          What We Do
+        </span>
+        <p style="margin-top:0.75rem;font-size:0.88rem;line-height:1.7;">
+          True Evaluators: Your Trusted Partner for Comprehensive Credential Evaluation Services.
+          From education and professional licensure to immigration and employment.
+        </p>
+      </div>
+
+      <!-- Right: 3x2 cards -->
+      <div class="srv-cards">
+        {services.map(s => (
+          <a href={s.href} class="srv-card">
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+            <span class="srv-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RFE ROW ── -->
+  <section class="section-pad" style="padding-top:0;">
+    <div class="container rfe-row">
+      <div class="rfe-img img-ph">
+        <div class="img-ph-inner">
+          <span>RFE Image<br/><small>(services-rfe.jpg)</small></span>
+        </div>
+      </div>
+      <div class="rfe-text">
+        <h2>Request For Evidence (RFE)</h2>
+        <p style="margin-top:0.75rem;">
+          Timely submission of RFE (Request for Evidence) is crucial, along with the comprehensive
+          submission of all required evidence. Typically, a decision is rendered post the evidence
+          submission.
+        </p>
+        <a href="/services/rfe" class="btn btn-primary" style="margin-top:1.5rem;">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.inner-hero {
+  background: var(--clr-bg-cream);
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+.inner-hero h1 {
+  color: var(--clr-primary);
+  font-size: clamp(1.7rem, 4vw, 2.8rem);
+}
+.hero-br { display: none; }
+@media (min-width: 640px) { .hero-br { display: block; } }
+.hero-sub {
+  max-width: 560px;
+  margin-inline: auto;
+  margin-top: 1rem;
+  font-size: 0.92rem;
+}
+
+/* Layout */
+.srv-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (min-width: 1024px) { .srv-layout { grid-template-columns: 240px 1fr; } }
+
+.srv-intro {}
+
+/* Cards */
+.srv-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--clr-border);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+@media (min-width: 640px)  { .srv-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .srv-cards { grid-template-columns: repeat(3, 1fr); } }
+
+.srv-card {
+  background: var(--clr-white);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: background var(--ease);
+  position: relative;
+}
+.srv-card:hover { background: var(--clr-bg-cream); }
+.srv-card h3 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--clr-text-dark);
+  line-height: 1.3;
+}
+.srv-card p {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  flex: 1;
+}
+.srv-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--clr-primary);
+  color: white;
+  margin-top: 0.5rem;
+  transition: transform var(--ease);
+}
+.srv-card:hover .srv-arrow { transform: translateX(3px); }
+
+/* RFE row */
+.rfe-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+@media (min-width: 768px) { .rfe-row { grid-template-columns: 1fr 1fr; } }
+.rfe-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-lg);
+}
+.rfe-text h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+</style>

@@ -1,0 +1,266 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const letters = [
+  {
+    num: '1.',
+    title: 'Specialty Occupation (for H-1B Visa)',
+    details: 'This formal letter establishes the H-1B position at a USCIS Specialty Occupation, requiring at least a Bachelor\'s Degree. We offer flexibility with timing, including a phone call, virtual site visit, or on-site visit with the expert, as well as discussions on the wage level.',
+    docsLabel: 'Please provide the employer\'s support letter, which should include a detailed description of the position and an exhaustive list of the required job duties for the offered position.',
+    items: [
+      'If you lack some necessary documents or are unsure about their sufficiency, we may still be able to complete a favorable Expert Opinion Letter. Send your documents for a free preliminary assessment, and we\'ll notify you if further documentation is recommended before proceeding.',
+    ],
+  },
+  {
+    num: '2.',
+    title: 'Comprehensive Letter (for H-1B Visa)',
+    details: 'In addition to establishing a position in Specialty Occupation, this expert letter goes further to assess the beneficiary\'s and/or work experience credentials, deeming them equivalent to a Bachelor\'s Degree in the required field. It also evaluates the suitability of the beneficiary for the offered position. Other options for communication, such as a phone call, virtual site visit, or on-site visit with the expert, are available, along with the option to discuss the beneficiary\'s fulfillment of the standard of "recognition of expertise".',
+    docsLabel: 'Required Documentation',
+    items: [
+      'For cases involving academic evaluation: Include the candidate\'s diploma and transcripts or mark sheets.',
+      'For cases involving work experience evaluation: Include employment verification letters indicating job title, start and end dates, a detailed description of job duties, evidence of the employee\'s progression in responsibility over time, discussions on the candidate\'s expertise, and confirmation that the experience was gained alongside peers holding a Bachelor\'s Degree in the relevant field or equivalent.',
+      'If you only possess a portion of the required documents or are unsure about their sufficiency, we may still be able to complete a favorable Expert Opinion Letter. Send your documents for a free preliminary assessment, and we\'ll notify you if further documentation is recommended before proceeding.',
+    ],
+  },
+  {
+    num: '3.',
+    title: 'Subsidiary Letter (for H-1B Visa)',
+    details: 'This letter thoroughly evaluates the beneficiary\'s academic and/or work experience qualifications, affirming their equivalence to a Bachelor\'s Degree or higher in pertinent fields. Furthermore, it recommends the suitability of the beneficiary for the specified position, substantiated by a comprehensive examination of their distinctive education, training, and professional background. Additionally, it includes the suitability of a phone call with the expert, available, along with the option to discuss the beneficiary\'s fulfillment of the standard of "recognition of expertise".',
+    docsLabel: 'Required Documentation',
+    items: [
+      'To facilitate the process, provide the employer\'s support letter, including a description of the position and an exhaustive list of the required job duties for the offered position.',
+      'For cases involving academic evaluation: Include the candidate\'s diploma and transcripts or mark sheets.',
+      'For cases involving work experience evaluation: Include employment verification letters indicating job title, start and end dates, a detailed description of job duties, evidence of the employee\'s progression in responsibility over time, discussions on the candidate\'s expertise, and confirmation that the experience was gained alongside peers holding a Bachelor\'s Degree in the relevant field or equivalent.',
+      'If you only possess a portion of the required documents or are unsure about their sufficiency, we may still be able to complete a favorable Expert Opinion Letter. Send your documents for a free preliminary assessment, and we\'ll notify you if further documentation is recommended before proceeding.',
+    ],
+  },
+  {
+    num: '4.',
+    title: 'OPT/CPT Letter (for H-1B Visa)',
+    details: 'A professional letter from an expert regarding OPT/CPT will establish the direct relevance of the beneficiary\'s CPT/OPT training position to the respective H-1B positions.',
+    docsLabel: 'Required Documentation',
+    items: [
+      'Transcripts from the US program where the beneficiary is currently enrolled or was enrolled.',
+      'An employment verification letter detailing the start and end dates, job title, and responsibilities of the OPT or CPT position.',
+      'Documentation of the employer company where the beneficiary is currently undertaking the OPT or CPT experience.',
+    ],
+  },
+  {
+    num: '5.',
+    title: 'Industry Standard Letter (H-1B Visa)',
+    details: 'The industry standard letter, authored by a seasoned recruiter in the relevant field, serves to establish that "the degree requirement is standard within the industry for such positions" among other relevant industry standards. This letter can be requested independently or as a supplementary document to a Specialty Occupation/Comprehensive expert opinion letter.',
+    docsLabel: 'Required Documentation',
+    items: [
+      'To facilitate this process, provide the employer\'s support letter, offering a description of the position and an exhaustive list of the required job duties for the offered position.',
+      'For cases involving academic evaluation: Include the candidate\'s diploma and transcripts or mark sheets.',
+    ],
+  },
+  {
+    num: '6.',
+    title: 'Business Necessity Letter',
+    details: 'This expert letter serves to substantiate the business necessity for an off-site or third-party worksite, ensuring that the job duties and responsibilities of the position are logical, necessary, and indispensable for proficient job performance "as outlined by pertinent regulations."',
+    docsLabel: 'Required Documentation',
+    items: [
+      'The I-9 Form W-2, Alternatively, all Microsoft Word documents listing the required job duties for the H-1B position and the employer\'s and employee\'s specified requirements.',
+      'A comprehensive description of the petitioner.',
+    ],
+  },
+  {
+    num: '7.',
+    title: 'Executive, Supervisory or Special Qualifications Letter (EB-12 Investor Visa)',
+    details: 'Moreover, beyond confirming that the advertised role involves Executive or Supervisory responsibilities or necessitates Special Qualifications, this expert letter aims to confirm the suitability of the beneficiary for the specified position.',
+    docsLabel: 'Required Documentation',
+    items: [
+      'To facilitate the process, provide the applicant\'s support letter for the required job duties for the H-1B position.',
+      'For cases involving academic evaluation: Include the candidate\'s diploma and transcripts or mark sheets.',
+      'For cases involving work experience: Include employment verification letters indicating job title, start and end today, a detailed description of job duties, evidence of the employee\'s progression in responsibility over time, discussions on the candidate\'s expertise, and comprehensive performance reviews.',
+      'If you only possess a portion of the required documents or are unsure about their sufficiency, we may still be able to complete a favorable Expert Opinion Letter. Send your documents for a free preliminary assessment, and we\'ll notify you if further documentation is needed before proceeding.',
+    ],
+  },
+  {
+    num: '8.',
+    title: 'RECENT UPDATES New Practitioner Letter (the EB-5 National Interest Waiver (NIW) petition)',
+    details: 'The USCIS frequently issues Requests for Additional Evidence (RECs), seeking evidence that an individual\'s work will significantly benefit the National Interest. Additionally, they may request letters in support of the beneficiary\'s exceptional situation in the United States. As expert letter writers for such cases is essential to showcase.',
+    docsLabel: 'Required Documentation',
+    items: [
+      'Letter of support, business plan, and/or personal statement providing comprehensive details on the proposed endeavors.',
+      'The beneficiary\'s credentials, including degrees and transcripts, resume, letters verifying professional references, accredited works, and a meaningful portfolio of early products.',
+      'NEW: The importance of providing delays in advancing the proposed endeavors through the EB-5 National Interest through the proposed endeavors.',
+    ],
+  },
+  {
+    num: '9.',
+    title: 'Exceptional Ability Letter (the EB-11 Visa)',
+    details: 'This letter comprehensively examines the beneficiary\'s all qualifications, and describes how he or she has fulfilled the USCIS requirements for classification as an individual of exceptional ability. In addition to establishing the status of the expertise, this letter demonstrates that the beneficiary has a degree of expertise significantly above that ordinarily encountered in the sciences, arts, or business, for the final merits determination.',
+    docsLabel: 'Required Documentation',
+    items: [
+      'The letter of support that at least three extraordinary criteria the beneficiary fulfills.',
+      'Any pertinent exhibits that support the claims of the letter and the candidate\'s Exceptional Ability.',
+    ],
+  },
+  {
+    num: '10.',
+    title: 'Management/Executive Capacity Letter (for L-1A/1B-1C Visa)',
+    details: 'This professional letter evaluates the beneficiary\'s foreign or US-based position, confirming it as Executive and/or Managerial. Prepared by a university professor (or other expert from their department), they must provide a clear description of the beneficiary\'s responsibilities and characteristics align with USCIS requirements.',
+    docsLabel: 'Required Documentation',
+    items: [
+      'The employer\'s support letter, providing a detailed description of the petitioner and an exhaustive list of the required job duties for the offered position.',
+      'Organization charts for both foreign and US companies, documenting the candidate\'s position in the corporate hierarchy.',
+      'If you only possess a portion of the required documents or are unsure about their sufficiency, we may still be able to complete a favorable Expert Opinion Letter. Send your documents for a free preliminary assessment, and we\'ll notify you if further documentation is needed before proceeding.',
+    ],
+  },
+  {
+    num: '11.',
+    title: 'Extraordinary Ability Letter (for O-1/1B-2B Visa)',
+    details: 'This professional letter evaluates the achievements and qualifications of a foreign national, detailing how they meet the USCIS standards for classification as an individual of extraordinary ability.',
+    docsLabel: 'Required Documentation',
+    items: [
+      'The employer\'s support letter, delivering which of the twelve extraordinary criteria the candidate satisfies.',
+      'Any necessary evidence substantiating the assertions made in the letter regarding the candidate\'s Extraordinary Ability.',
+    ],
+  },
+  {
+    num: '12.',
+    title: 'Specialized Knowledge Letter (for L1-B Visa)',
+    details: 'This comprehensive report features an expert opinion letter provided by a field-specific professor. The initial phase involves an extensive analysis of the beneficiary\'s specialized knowledge, followed by a meticulous review. Subsequently, the professor evaluates how the beneficiary\'s background, as presented in the evidence, aligns with and exceeds the level of Specialized Knowledge within the company or foreign entity.',
+    docsLabel: 'Required Documentation',
+    items: [
+      'The employer\'s support letter, offering a detailed description of the petitioner and an exhaustive list of the required job duties for the offered position.',
+      'Any internal training materials that address the specialized knowledge made in the letter regarding the candidate\'s Specialized Ability.',
+      'Please Send your documents for a free preliminary assessment, and we\'ll notify you if further documentation is needed before proceeding.',
+    ],
+  },
+  {
+    num: '13.',
+    title: 'Extraordinary Ability Letter (for EB-1 Visa)',
+    details: 'This expert letter confirms the eligibility of a position under one of the categories outlined in the North American Free Trade Agreement (NAFTA). Upon request, the expert can additionally assess the beneficiary\'s academic credentials and/or discuss their work experience history to affirm the suitability of the candidate for the specified position.',
+    docsLabel: 'Required Documentation',
+    items: [
+      'The employer\'s support letter, providing a comprehensive description of the petitioner and an exhaustive list of the required job duties for the offered position.',
+      'The cases involving academic evaluation: The candidate\'s diploma and transcripts or mark sheets.',
+    ],
+  },
+  {
+    num: '14.',
+    title: 'Trustee Letter',
+    details: 'This specific offer letter concerns what a foreign national receives a promotion within a company that intends to sponsor their green card, according to the U.S. Department of Labor (DOL) decision, supervisors qualified in the petitioner\'s subsector or who previously in the sponsor\'s position are required to agree with whether the replacement\'s qualifications meet the difference not less than 50%, thus meeting the criterion of not being "substantially comparable".',
+    docsLabel: 'Required Documentation',
+    items: [
+      'The assessment of the duties of the position, specifying the job duties for both roles (including the percentage of time dedicated to each duty), and verifying the job requirements for each position.',
+    ],
+  },
+  {
+    num: '15.',
+    title: '"Substantially Comparable" Letter',
+    details: 'An assessment of the duties of the position, specifying the job duties for both roles (including the percentage of time dedicated to each duty, and verifying the job requirements for each position.',
+    docsLabel: null,
+    items: [],
+  },
+];
+---
+
+<Layout
+  title="Expert Opinion Letters – True Evaluators"
+  description="True Evaluators is a global leader in creating detailed reports that help people understand how their foreign education and immigration background, and the US Labor Department, international academic advisory organizations, and American universities for their accuracy and helpful information."
+>
+
+  <!-- ── HERO ── -->
+  <section class="inner-hero">
+    <div class="container" style="text-align:center;">
+      <h1>Expert Opinion Letters</h1>
+    </div>
+  </section>
+
+  <!-- ── CONTENT ── -->
+  <section class="section-pad">
+    <div class="container eol-content">
+
+      <!-- Intro paragraphs -->
+      <p>
+        True Evaluators is a global leader in creating detailed reports that help people understand
+        how their foreign education and immigration background, and the US Labor Department,
+        international academic advisory organizations, and American universities for their accuracy
+        and helpful information.
+      </p>
+      <p style="margin-top:0.9rem;">
+        In addition to evaluating academic credentials, evaluating transcripts, training programs,
+        and immigration processes, and providing expert opinion letters, we offer in-depth analyses
+        for immigration cases. Many of our clients rely on our Professional/Specialty Opinion/Evaluations,
+        as recommended by Request for Evidence to Residence (RFE) and expert opinion to a numerous
+        solutions in H-1B Response to H-1B RFEs and expert evaluations, helping clients navigate the
+        complex process of specialty immigration, particularly those related to immigrations.
+      </p>
+      <p style="margin-top:0.9rem;">
+        True Evaluators currently offers 15 types of opinion letters, encompassing various types to cater to diverse needs.
+      </p>
+
+      <!-- Letter types -->
+      <div class="letters-list">
+        {letters.map(letter => (
+          <div class="letter-section">
+            <h3>{letter.num} {letter.title}</h3>
+
+            <p class="letter-label">Details:</p>
+            <p class="letter-details">{letter.details}</p>
+
+            {letter.docsLabel && (
+              <>
+                <p class="letter-label" style="margin-top:1rem;">Required Documents</p>
+                <ul class="checklist">
+                  {letter.items.map(item => (
+                    <li class="checklist-item">
+                      <span class="check-icon" aria-hidden="true">
+                        <svg viewBox="0 0 20 20" fill="none" width="17" height="17">
+                          <circle cx="10" cy="10" r="9" fill="var(--clr-primary-light)" stroke="var(--clr-primary)" stroke-width="1.2"/>
+                          <path d="M6 10l3 3 5-6" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span class="check-text">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.inner-hero { background:var(--clr-bg-cream); padding-block:clamp(3rem,6vw,5rem); }
+.inner-hero h1 { color:var(--clr-primary); font-size:clamp(2rem,5vw,3rem); }
+
+.eol-content { max-width:900px; }
+.eol-content > p { font-size:0.9rem; line-height:1.75; }
+
+.letters-list { margin-top:2.5rem; display:flex; flex-direction:column; gap:2rem; }
+
+.letter-section {
+  border-bottom:1px solid var(--clr-border);
+  padding-bottom:2rem;
+}
+.letter-section:last-child { border-bottom:none; padding-bottom:0; }
+.letter-section h3 {
+  font-family:var(--font-body);
+  font-size:0.95rem;
+  font-weight:700;
+  color:var(--clr-text-dark);
+  margin-bottom:0.75rem;
+}
+.letter-label {
+  font-family:var(--font-body);
+  font-size:0.85rem;
+  font-weight:700;
+  color:var(--clr-text-dark);
+  margin-bottom:0.4rem;
+}
+.letter-details { font-size:0.88rem; line-height:1.7; }
+
+.checklist { list-style:none; display:flex; flex-direction:column; gap:0.65rem; margin-top:0.25rem; }
+.checklist-item { display:flex; gap:0.65rem; align-items:flex-start; }
+.check-icon { flex-shrink:0; margin-top:2px; }
+.check-text { font-size:0.86rem; color:var(--clr-primary); line-height:1.55; }
+</style>

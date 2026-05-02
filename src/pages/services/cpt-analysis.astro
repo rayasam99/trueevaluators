@@ -1,0 +1,217 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const reasons = [
+  {
+    title: 'Specialty Occupation',
+    desc: "USCIS may question if your CPT experience aligns with the definition of a 'specialty occupation.' This is because H-1B position requires a bachelor's degree in a specific field, and your education and experience must meet these qualifications.",
+    dark: false,
+  },
+  {
+    title: 'Relationship between CPT and H-1B',
+    desc: 'USCIS may request a clear connection between your CPT training and the duties of your H-1B position. Include evidence showcasing how your CPT experience directly relates to the skills and knowledge needed for the H-1B job.',
+    dark: false,
+  },
+  {
+    title: 'Maintaining F-1 Status',
+    desc: 'USCIS may ask for documentation to ensure continuous F-1 status during your CPT program. Include evidence of full-time enrollment, authorized CPT periods, and timely completion of your degree.',
+    dark: true,
+  },
+];
+
+const steps = [
+  {
+    title: '1. Understand the RFE',
+    items: [
+      'Meticulously review the Request for Evidence (RFE) to discern specific concerns raised by USCIS regarding your Curricular Practical Training (CPT).',
+      'Pay meticulous attention to the nuanced use of keywords in the RFE, as these serve as guideposts for constructing a comprehensive and insightful response.',
+    ],
+  },
+  {
+    title: '2. Gather Evidence',
+    intro: 'Assemble all requisite documents and information to directly and comprehensively address the concerns outlined in the RFE.',
+    note: 'This may include:',
+    items: [
+      'Educational Records: Transcripts, diplomas, degree certificates, and other pertinent academic documents.',
+      'CPT Authorization Documents: Complete Forms I-20 with CPT notations, CPT authorization letters from your educational institution, and any pertinent communication with USCIS related to CPT approval.',
+      'Employment Documentation: Detailed job descriptions for both your CPT and H-1B positions, employer letters validating your employment and delineating responsibilities, pay stubs, and comprehensive performance reviews.',
+      'Additional Supporting Evidence: Inclusive of course syllabi, project reports, certificates of completion for pertinent training programs, and evidence showcasing your skills and expertise relevant to both CPT and H-1B roles.',
+    ],
+  },
+  {
+    title: '3. Analyze the Relationship',
+    items: [
+      'Clearly articulate the nexus between your CPT experience and the proposed H-1B employment.',
+      'Demonstrate how the skills and knowledge acquired during your CPT align directly with the prerequisites for the H-1B position.',
+      'Utilize specific examples and detailed instances to vividly illustrate the practical application of your training in the context of the new role.',
+    ],
+  },
+  {
+    title: '4. Address Concerns',
+    items: [
+      "If the RFE raises concerns regarding your F-1 status or compliance with CPT regulations, address them directly with a well-substantiated response.",
+      'Present evidence validating full-time enrollment during your CPT program, timely degree completion, and adherence to CPT authorization limitations.',
+    ],
+  },
+  {
+    title: '5. Organize and Prepare Your Response',
+    items: [
+      'Structure your response in a logical and coherent manner for seamless review by USCIS.',
+      'Employ a professional format, encompassing a clear and succinct cover letter, a detailed point-by-point explanation addressing each RFE concern, and appropriately labeled exhibits for all supporting documents.',
+    ],
+  },
+];
+---
+
+<Layout
+  title="CPT Analysis for H-1B RFE – True Evaluators"
+  description="Effectively navigating the CPT analysis for an H-1B RFE. Expert guidance to assist you in this intricate process and point you towards valuable resources."
+>
+
+  <!-- ── HERO ── -->
+  <section class="inner-hero">
+    <div class="container" style="text-align:center;">
+      <h1>CPT Analysis for H-1B RFE</h1>
+    </div>
+  </section>
+
+  <!-- ── DUAL IMAGES ── -->
+  <section style="background:var(--clr-bg-cream);padding-bottom:clamp(2rem,4vw,3.5rem);">
+    <div class="container dual-imgs">
+      <img src="/CPT-Analysis-for-H-1B-RFE/CPT-Analysis-Img-2.jpg" alt="CPT Analysis for H-1B RFE" class="dual-img-main" />
+      <img src="/CPT-Analysis-for-H-1B-RFE/CPT-Analysis-Img-3.jpg" alt="CPT Analysis services" class="dual-img-side" />
+    </div>
+  </section>
+
+  <!-- ── INTRO ── -->
+  <section class="section-pad">
+    <div class="container intro-grid">
+      <img src="/CPT-Analysis-for-H-1B-RFE/CPT-Analysis-Img-1.jpg" alt="What is CPT" class="intro-img" />
+      <div>
+        <p>
+          Effectively navigating the CPT analysis for an H-1B RFE demands a nuanced
+          understanding of your unique circumstances and the exacting standards set by
+          USCIS. In order to assist you in this intricate process, I can offer a
+          comprehensive overview and point you towards valuable resources to initiate
+          your response.
+        </p>
+        <h3 style="margin-top:1.5rem;">What is CPT?</h3>
+        <p style="margin-top:0.6rem;">
+          Curricular Practical Training (CPT) allows F-1 students to gain hands-on
+          experience in their field of study through authorized employment. This can
+          be undertaken either before completing the degree (pre-completion) or after
+          graduation (post-completion).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REASONS ── -->
+  <section class="section-pad" style="background:var(--clr-bg-cream);">
+    <div class="container">
+      <div class="reasons-header">
+        <div class="reasons-left">
+          <span class="eyebrow">
+            <svg viewBox="0 0 14 14" fill="none" width="10" height="10" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:4px;">
+              <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            What is an H-1B RFE?
+          </span>
+          <p style="margin-top:0.6rem;font-size:0.85rem;line-height:1.7;">
+            A Request for Evidence (RFE) is issued by USCIS when additional information
+            is needed to evaluate your H-1B application. If you've been on CPT, USCIS may
+            seek specific details about your CPT program and its relevance to your proposed
+            H-1B employment.
+          </p>
+        </div>
+        <h2 class="reasons-heading">Common reasons for CPT-related RFEs:</h2>
+      </div>
+
+      <div class="reasons-cards">
+        {reasons.map(r => (
+          <div class={`reason-card ${r.dark ? 'reason-card-dark' : ''}`}>
+            <h3>{r.title}</h3>
+            <p>{r.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STEPS ── -->
+  <section class="section-pad">
+    <div class="container">
+      <h2 style="margin-bottom:1.75rem;">Steps involved in analyzing your CPT for an H-1B RFE:</h2>
+
+      <div class="steps-list">
+        {steps.map(step => (
+          <div class="cpt-step">
+            <h3>{step.title}</h3>
+            {step.intro && <p style="margin:0.5rem 0;font-size:0.9rem;">{step.intro}</p>}
+            {step.note && <p style="font-size:0.9rem;margin-bottom:0.5rem;">{step.note}</p>}
+            <ul class="checklist">
+              {step.items.map(item => (
+                <li class="checklist-item">
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" fill="none" width="18" height="18">
+                      <circle cx="10" cy="10" r="9" fill="var(--clr-primary-light)" stroke="var(--clr-primary)" stroke-width="1.2"/>
+                      <path d="M6 10l3 3 5-6" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="check-text">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.inner-hero { background:var(--clr-bg-cream); padding-block:clamp(3rem,6vw,5rem); }
+.inner-hero h1 { color:var(--clr-primary); font-size:clamp(2rem,5vw,3rem); }
+
+.dual-imgs { display:grid; grid-template-columns:3fr 2fr; gap:1rem; }
+@media (max-width:640px) { .dual-imgs { grid-template-columns:1fr; } }
+.dual-img-main { height:clamp(320px,40vw,520px); border-radius:var(--radius-lg); width:100%; object-fit:cover; display:block; }
+.dual-img-side { height:clamp(320px,40vw,520px); border-radius:var(--radius-lg); width:100%; object-fit:cover; display:block; }
+
+.intro-grid { display:grid; grid-template-columns:1fr; gap:2.5rem; align-items:center; }
+@media (min-width:768px) { .intro-grid { grid-template-columns:1fr 1.4fr; } }
+.intro-img { width:100%; aspect-ratio:4/5; border-radius:var(--radius-lg); object-fit:cover; display:block; }
+
+.reasons-header { display:grid; grid-template-columns:1fr; gap:2rem; margin-bottom:2rem; }
+@media (min-width:768px) { .reasons-header { grid-template-columns:1fr 1fr; align-items:end; } }
+.reasons-heading { font-size:clamp(1.4rem,2.5vw,2rem); }
+
+.reasons-cards { display:grid; grid-template-columns:1fr; gap:1.25rem; }
+@media (min-width:640px)  { .reasons-cards { grid-template-columns:repeat(2,1fr); } }
+@media (min-width:1024px) { .reasons-cards { grid-template-columns:repeat(3,1fr); } }
+
+.reason-card {
+  background:var(--clr-white); border:1px solid var(--clr-border);
+  border-radius:var(--radius-lg); padding:1.75rem;
+  transition:transform var(--ease),box-shadow var(--ease);
+}
+.reason-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-lg); }
+.reason-card h3 { font-size:1rem; margin-bottom:0.6rem; }
+.reason-card p  { font-size:0.85rem; }
+.reason-card-dark { background:var(--clr-primary-dark); border-color:var(--clr-primary-dark); }
+.reason-card-dark h3 { color:white; }
+.reason-card-dark p  { color:rgba(255,255,255,0.7); }
+
+.steps-list { display:flex; flex-direction:column; gap:1.5rem; }
+.cpt-step {
+  border:1px solid var(--clr-border); border-radius:var(--radius-lg);
+  padding:1.5rem 1.75rem;
+}
+.cpt-step h3 { font-family:var(--font-body); font-size:1rem; font-weight:700; color:var(--clr-text-dark); margin-bottom:0.75rem; }
+
+.checklist { list-style:none; display:flex; flex-direction:column; gap:0.65rem; }
+.checklist-item { display:flex; gap:0.65rem; align-items:flex-start; }
+.check-icon { flex-shrink:0; margin-top:1px; }
+.check-text { font-size:0.86rem; color:var(--clr-primary); line-height:1.5; }
+</style>
